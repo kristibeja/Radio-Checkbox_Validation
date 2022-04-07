@@ -1,0 +1,9 @@
+.my-form{
+    width: 500px;
+    margin: auto;
+}
+
+
+.radiobtn-hidden, .input-hidden{
+    display: none;
+}
