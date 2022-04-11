@@ -34,6 +34,15 @@ submit_btn.addEventListener('click', () => {
     else if (radio1.checked === true){
         text.innerHTML = 'You have chosen the FIRST option.';
         text.style.color = 'rgb(0,129,64)'; //green color
+        if(radio1.checked === true && checkbox.checked === true){
+          if(input.value === ''){
+            text.innerHTML = 'Please enter your name before submitting!';
+            text.style.color = 'red';
+          }else {
+            text.innerHTML = `Thanks for checking the FIRST Option. Your name is < ${input.value} >`;
+          text.style.color = 'rgb(0,129,64)'; //green color
+          }
+        }
         // change btn color
         // submit_btn.classList.remove("btn-outline-primary");
         // submit_btn.classList.remove("btn-danger");
@@ -42,6 +51,15 @@ submit_btn.addEventListener('click', () => {
     else if(radio2.checked === true){
         text.innerHTML = 'You have chosen the SECOND option';
         text.style.color = 'rgb(0,129,64)'; //green color
+        if(radio2.checked === true && checkbox.checked === true){
+          if(input.value === ''){
+            text.innerHTML = 'Please enter your name before submitting!';
+            text.style.color = 'red';
+          }else {
+            text.innerHTML = `Thanks for checking the SECOND Option. Your name is < ${input.value} >`;
+            text.style.color = 'rgb(0,129,64)'; //green color
+          }
+        }
     } 
     else if (radio3.checked === true){
         if (radio4.checked === false && radio5.checked === false && radio6.checked === false){
@@ -51,40 +69,29 @@ submit_btn.addEventListener('click', () => {
     } 
     else if (radio4.checked === true || radio5.checked === true || radio6.checked === true){
       if(checkbox.checked === false){
-        text.innerHTML = 'You should click the Check Me button before submitting!';
+        text.innerHTML = 'You should click the &lsquo;Check Me&lsquo; button before submitting!';
         text.style.color = 'red';
-      } else if (checkbox.checked === true && input.value === ''){
+      } 
+      else if (checkbox.checked === true && input.value === ''){
           text.innerHTML = 'Please enter your name before submitting!';
           text.style.color = 'red';
-      }else { 
-        text.innerHTML = `Thanks for checking. Your name is < ${input.value} >`;
+      }
+      else if(radio4.checked === true) { 
+        text.innerHTML = `Thanks for checking option 4. Your name is < ${input.value} >`;
+        text.style.color = 'rgb(0,129,64)'; //green color
+      } 
+      else if(radio5.checked === true) { 
+        text.innerHTML = `Thanks for checking option 5. Your name is < ${input.value} >`;
+        text.style.color = 'rgb(0,129,64)'; //green color
+      } 
+      else if(radio6.checked === true) { 
+        text.innerHTML = `Thanks for checking option 6. Your name is < ${input.value} >`;
         text.style.color = 'rgb(0,129,64)'; //green color
       }
+    } else {
+      text.innerHTML = 'Choose an option after clicking &lsquo;Check Me&lsquo;';
+      text.style.color = 'red';
     }
-    
-
-    // else if (radio4.checked === true && checkbox.checked === true){
-    //   text.innerHTML = 'You have chosen the FOURTH option';
-    //   text.style.color = 'rgb(0,129,64)'; //green color
-    // } 
-
-    // else if (radio5.checked === true){
-    //   text.innerHTML = 'You have chosen the FIFTH option';
-    //   text.style.color = 'green';
-    // } 
-    // else if (radio6.checked === true){
-    //   text.innerHTML = 'You have chosen the SIXTH option';
-    //   text.style.color = 'green';
-    // } 
-  //   else if (checkbox.checked === true){
-  //     if (input.value === ''){
-  //     text.innerHTML = 'Please enter your name before submitting!';
-  //     text.style.color = 'red';
-  //   } else {
-  //       text.innerHTML = `Thanks for checking. Your name is < ${input.value} >`;
-  //       text.style.color = 'green';
-  //   }
-  //  }
 
   });
 
@@ -104,6 +111,7 @@ function showInput() {
         hidden_input.classList.remove("input-hidden");
     } else {
        hidden_input.classList.add("input-hidden");
+       input.value = '';
     }
   }
 
