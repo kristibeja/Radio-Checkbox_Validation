@@ -1,5 +1,13 @@
 body{
-    background-color: #6c17c2;  /* #004494 blue */
+    background-color: #4e0894;  /* #004494 blue */
+    padding: 3rem;
+}
+
+.title{
+    text-align: center;
+    color: #4e0894;
+    text-shadow: 0 0 3px rgb(244, 233, 220), 0 0 5px rgb(244, 233, 220);
+    
 }
 
 section{

@@ -28,36 +28,64 @@ submit_btn.addEventListener('click', () => {
     text.innerHTML = 'Please choose an option!';
     text.style.color = 'red';
     // change btn color
-    // submit_btn.classList.remove("btn-outline-primary");
-    // submit_btn.classList.add("btn-danger");
+    submit_btn.classList.remove("btn-outline-primary");
+    submit_btn.classList.add("btn-danger");
   } 
     else if (radio1.checked === true){
         text.innerHTML = 'You have chosen the FIRST option.';
         text.style.color = 'rgb(0,129,64)'; //green color
+
+        // change btn color
+        submit_btn.classList.remove("btn-outline-primary");
+        submit_btn.classList.remove("btn-danger");
+        submit_btn.classList.add("btn-success");
+
         if(radio1.checked === true && checkbox.checked === true){
           if(input.value === ''){
             text.innerHTML = 'Please enter your name before submitting!';
             text.style.color = 'red';
+
+            // change btn color
+            submit_btn.classList.remove("btn-outline-primary");
+            submit_btn.classList.remove("btn-success");
+            submit_btn.classList.add("btn-danger");
           }else {
             text.innerHTML = `Thanks for checking the FIRST Option. Your name is < ${input.value} >`;
-          text.style.color = 'rgb(0,129,64)'; //green color
+            text.style.color = 'rgb(0,129,64)'; //green color
+
+            // change btn color
+            submit_btn.classList.remove("btn-outline-primary");
+            submit_btn.classList.remove("btn-danger");
+            submit_btn.classList.add("btn-success");
           }
         }
-        // change btn color
-        // submit_btn.classList.remove("btn-outline-primary");
-        // submit_btn.classList.remove("btn-danger");
-        // submit_btn.classList.add("btn-success");
+        
     } 
     else if(radio2.checked === true){
         text.innerHTML = 'You have chosen the SECOND option';
         text.style.color = 'rgb(0,129,64)'; //green color
+
+        // change btn color
+        submit_btn.classList.remove("btn-outline-primary");
+        submit_btn.classList.remove("btn-danger");
+        submit_btn.classList.add("btn-success");
+
         if(radio2.checked === true && checkbox.checked === true){
           if(input.value === ''){
             text.innerHTML = 'Please enter your name before submitting!';
             text.style.color = 'red';
+            // change btn color
+            submit_btn.classList.remove("btn-outline-primary");
+            submit_btn.classList.remove("btn-success");
+            submit_btn.classList.add("btn-danger");
+
           }else {
             text.innerHTML = `Thanks for checking the SECOND Option. Your name is < ${input.value} >`;
             text.style.color = 'rgb(0,129,64)'; //green color
+            // change btn color
+            submit_btn.classList.remove("btn-outline-primary");
+            submit_btn.classList.remove("btn-danger");
+            submit_btn.classList.add("btn-success");
           }
         }
     } 
@@ -65,35 +93,64 @@ submit_btn.addEventListener('click', () => {
         if (radio4.checked === false && radio5.checked === false && radio6.checked === false){
           text.innerHTML = 'You clicked option three. You should choose one of these other three options!';
           text.style.color = 'red';
+          // change btn color
+          submit_btn.classList.remove("btn-outline-primary");
+          submit_btn.classList.remove("btn-success");
+          submit_btn.classList.add("btn-danger");
         } 
     } 
     else if (radio4.checked === true || radio5.checked === true || radio6.checked === true){
       if(checkbox.checked === false){
         text.innerHTML = 'You should click the &lsquo;Check Me&lsquo; button before submitting!';
         text.style.color = 'red';
+        // change btn color
+        submit_btn.classList.remove("btn-outline-primary");
+        submit_btn.classList.remove("btn-success");
+        submit_btn.classList.add("btn-danger");
       } 
       else if (checkbox.checked === true && input.value === ''){
           text.innerHTML = 'Please enter your name before submitting!';
           text.style.color = 'red';
+          // change btn color
+          submit_btn.classList.remove("btn-outline-primary");
+          submit_btn.classList.remove("btn-success");
+          submit_btn.classList.add("btn-danger");
       }
       else if(radio4.checked === true) { 
         text.innerHTML = `Thanks for checking option 4. Your name is < ${input.value} >`;
         text.style.color = 'rgb(0,129,64)'; //green color
+        // change btn color
+        submit_btn.classList.remove("btn-outline-primary");
+        submit_btn.classList.remove("btn-danger");
+        submit_btn.classList.add("btn-success");
       } 
       else if(radio5.checked === true) { 
         text.innerHTML = `Thanks for checking option 5. Your name is < ${input.value} >`;
         text.style.color = 'rgb(0,129,64)'; //green color
+        // change btn color
+        submit_btn.classList.remove("btn-outline-primary");
+        submit_btn.classList.remove("btn-danger");
+        submit_btn.classList.add("btn-success");
       } 
       else if(radio6.checked === true) { 
         text.innerHTML = `Thanks for checking option 6. Your name is < ${input.value} >`;
         text.style.color = 'rgb(0,129,64)'; //green color
+        // change btn color
+        submit_btn.classList.remove("btn-outline-primary");
+        submit_btn.classList.remove("btn-danger");
+        submit_btn.classList.add("btn-success");
       }
     } else {
       text.innerHTML = 'Choose an option after clicking &lsquo;Check Me&lsquo;';
       text.style.color = 'red';
+      // change btn color
+      submit_btn.classList.remove("btn-outline-primary");
+      submit_btn.classList.remove("btn-success");
+      submit_btn.classList.add("btn-danger");
     }
 
   });
+
 
 
 // on third radio btn check show div 
@@ -104,6 +161,7 @@ function showRadiobtns() {
         radiobtn_hidden.classList.add("radiobtn-hidden");
     }
   }
+
 
 // on checkbox checked show input 
 function showInput() {
